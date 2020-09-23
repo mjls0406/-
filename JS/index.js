@@ -145,3 +145,20 @@
             }
         }
 })();
+
+//手风琴功能
+(function(){
+    var lis = document.querySelectorAll('#section7 li'),
+        len = lis.length,
+        ln = 0;
+        for(var i = 0;i < len;i++){
+            lis[i].index = i;
+            lis[i].onclick = function(){
+                lis[ln].classList.remove('active');
+                this.classList.add('active');
+                ln = this.index;
+            }
+
+        }
+
+})();
